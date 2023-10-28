@@ -1,4 +1,4 @@
-todo list 
+#todo list 
 
 - create project - ok 
 - install dependencies (express, selenium-webdriver) - ok 
@@ -11,4 +11,3 @@ todo list
 - implement scrap jso to insert in form - pendent 
 - finish - pendent
 
-# the addon for this repository is at https://github.com/joao-vitor-carvalho/node-xlsx
