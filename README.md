@@ -15,17 +15,17 @@
 #Usage 
 
 #install dependencies 
-sudo npm install
+- sudo npm install
 
 #run index.js
-  node index.js
+- node index.js
 
-  acess: [http://localhost](http://localhost:3000/)
+- acess: [http://localhost](http://localhost:3000/)
 
 #run Create-excel.js
-  node Create-excel.js
+- node Create-excel.js
 
-  show file in current directory
+- show file in current directory
 
 
   
