@@ -2,6 +2,7 @@ xlsx = require('node-xlsx').default;
 
 
 //inserir infos de JSON gerado em index.js 
+//parse a JSON file to create xlsx file 
 const data = [
   [1, 2, 3],
   [true, false, null, 'sheetjs'],
@@ -13,8 +14,13 @@ const sheetOptions = {'!cols': [{wch: 6}, {wch: 7}, {wch: 10}, {wch: 20}]};
 var buffer = xlsx.build([{name: 'mySheetName', data: data}], {sheetOptions}); // Returns a buffer
 
 
+//estudar impressão de arquivo 
+var test = buffer.getAtributte(value); 
+
+console.log(test);  
+
 
 //arquivo aparentemente criado, mas não impresso 
-
+//objeto indefinido, buscar como salvar em arquivo 
 
 //criar arquivo buffer 
