@@ -1,3 +1,6 @@
+- This is a node scrapper example for interview job to rpa developer.
+
+
 #todo list 
 
 - create project - ok 
