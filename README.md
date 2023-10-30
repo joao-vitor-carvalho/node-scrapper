@@ -7,6 +7,5 @@ todo list
 - create json file with node scrap - ok 
 - install dependencies (node-xlsx) - ok 
 - implement convert json to excel - ok 
-- implement scrap excel to insert in form - 
+- implement scrap excel to insert in form - pendent 
 - show insert with informations - pendent 
-- finish -
