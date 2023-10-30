@@ -1,5 +1,10 @@
 todo list 
 
+
+This is a node scrapper example for interview job to rpa developer.
+
+
+
 - create project - ok 
 - install dependencies (express, selenium-webdriver) - ok 
 - create index.js - ok 
