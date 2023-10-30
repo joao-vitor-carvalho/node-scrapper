@@ -9,12 +9,12 @@
 ###### How to Use:
 
   1. git clone this repository
-     1.1 git clone 
+   # 1.1 git clone 
   2. open in terminal a folder of project 
   3. install dependencies in directory
-     3.1 sudo npm install 
+   # 3.1 sudo npm install 
   4. init server with 'node index.js'
-     4.1 sudo node index.js
+   # 4.1 sudo node index.js
      acess: http://localhost:3000/
      
 
@@ -24,12 +24,13 @@
 
 
 
-- [x]  create project 
+- [x] create project 
 - [x] install dependencies (express, selenium-webdriver) 
 - [x] create index.js  
 - [x] implement node scrap  
 - [x] create json file with node scrap  
 - [x] install dependencies (node-xlsx)  
-- [x] implement convert json to excel  
-- [ ] implement scrap excel to insert in form 
-- [ ] show insert with informations
+- [x] convert json to excel  
+- [ ] scrap excel to insert in form 
+- [ ] show insert with informations (display)
+- [x] show insert with informations (terminal)
