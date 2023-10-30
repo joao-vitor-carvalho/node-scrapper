@@ -13,7 +13,7 @@
   3. open in terminal a folder of project 
   4. install dependencies in directory
   5. 'sudo npm install' 
-  4. init server with 'node index.js'
+  4. init server
   5. 'sudo node index.js'
   6. acess: http://localhost:3000/
      
