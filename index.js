@@ -52,9 +52,9 @@ async function getVideos(videos) {
           .findElement(By.xpath('//*[@id="DataTables_Table_0"]/tbody/tr[1]/td[2]'))
           .getText();
         videoDetails.push({
-          title: title ?? '',
-          views: views ?? '',
-          publishedDate: date ?? '',
+          Rendering_engine: title ?? '',
+          Platforms: views ?? '',
+          Browser: date ?? '',
         });
       }
     } catch (error) {

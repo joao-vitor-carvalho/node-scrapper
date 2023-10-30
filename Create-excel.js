@@ -1,26 +1,16 @@
-xlsx = require('node-xlsx').default; 
+//excel create with json informations
+
+var fs = require('fs');
+var writeStream = fs.createWriteStream("infos.xls");
+
+var header="Rendering_engine"+"\t"+" Platforms"+"\t"+"Browser"+"\n";
+var row1 = "Gecko"+"\t"+"Firefox 1.0"+"\t"+"Win 98+ / OSX.2+"+"\n";
+var row2 = "Gecko"+"\t"+"Firefox 1.5"+"\t"+"Win 98+ / OSX.2+"+"\n";
+
+writeStream.write(header);
+writeStream.write(row1);
+writeStream.write(row2);
+
+writeStream.close();
 
 
-//inserir infos de JSON gerado em index.js 
-//parse a JSON file to create xlsx file 
-const data = [
-  [1, 2, 3],
-  [true, false, null, 'sheetjs'],
-  ['foo', 'bar', new Date('2014-02-19T14:30Z'), '0.3'],
-  ['baz', null, 'qux'],
-];
-const sheetOptions = {'!cols': [{wch: 6}, {wch: 7}, {wch: 10}, {wch: 20}]};
-
-var buffer = xlsx.build([{name: 'mySheetName', data: data}], {sheetOptions}); // Returns a buffer
-
-
-//estudar impressão de arquivo 
-var test = buffer.getAtributte(value); 
-
-console.log(test);  
-
-
-//arquivo aparentemente criado, mas não impresso 
-//objeto indefinido, buscar como salvar em arquivo 
-
-//criar arquivo buffer 
