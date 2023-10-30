@@ -10,8 +10,7 @@
 - create json file with node scrap - ok 
 - install dependencies (node-xlsx) - ok 
 - implement convert json to excel - implement 
-- reader xlsx file to json - pendent 
-- implement scrap jso to insert in form - pendent
+- implement scrap json to insert in form - pendent
 - show insert with informations - pendent 
 - finish - pendent
 
