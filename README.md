@@ -9,9 +9,14 @@
 ###### How to Use:
 
   1. git clone this repository
-  2. acess folder and install dependencies
-  3. init server with 'node index.js'
-  4. 
+     1.1 git clone 
+  2. open in terminal a folder of project 
+  3. install dependencies in directory
+     3.1 sudo npm install 
+  4. init server with 'node index.js'
+     4.1 sudo node index.js
+     acess: http://localhost:3000/
+     
 
 
 
