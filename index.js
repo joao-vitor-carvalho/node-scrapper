@@ -3,11 +3,13 @@ const { Builder, By } = require('selenium-webdriver');
  
 
 
+// todos os requisitos para a aplicação rodam neste mesmo script 
+
+
 //connect to server for scrap
 const app = express();
 const port = 3000;
 app.get('/', async (request, response) => {
- // Scraping Code 
  try {
    const data = await WebScrapingLocalTest();
    response.status(200).json(data);
@@ -21,7 +23,7 @@ app.listen(port, () => {
  console.log(`Example app listening at http://localhost:${port}`);
 });
 
-//get allVideos to first page 
+//get allVideos(function for general infos) to first page 
 async function WebScrapingLocalTest() {
  try {
    driver = await new Builder().forBrowser('chrome').build();
@@ -37,8 +39,7 @@ async function WebScrapingLocalTest() {
  }
 }
 
-//nao alterar função acima, trazendo vídeos
-//getVideos() split videos 
+//getVideos() split infos 
 
 async function getVideos(videos) {
     let videoDetails = [];
@@ -61,9 +62,25 @@ async function getVideos(videos) {
       console.log(error);
     }
     return videoDetails;
+    console.log(videoDetails);
+    //scrap finalizado e JSON gerado em videoDetails
    }
+    
+
+var fs = require('fs');
+var writeStream = fs.createWriteStream("infos.xls");
+
+var header="Rendering_engine"+"\t"+" Platforms"+"\t"+"Browser"+"\n";
+var row1 = "Gecko"+"\t"+"Firefox 1.0"+"\t"+"Win 98+ / OSX.2+"+"\n";
+var row2 = "Gecko"+"\t"+"Firefox 1.5"+"\t"+"Win 98+ / OSX.2+"+"\n";
+
+writeStream.write(header);
+writeStream.write(row1);
+writeStream.write(row2);
+
+writeStream.close();
+
+//excel create with json informations
 
 
-
-   //scrap finalizado e JSON gerado em videoDetails
-   //videoDetails returns 
+//inserir script insert-form.js a abaixo
