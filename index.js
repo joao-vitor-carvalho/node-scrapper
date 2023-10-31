@@ -86,7 +86,7 @@ writeStream.close();
 //excel create with json informations
 
 console.log("---------- --------- scrap execeuted in http://webapplayers.com/inspinia_admin-v2.9.4/table_data_tables.html -------- ---------- ");
-console.log("---------- --------- excel file has created -------- ---------- ");
+console.log("---------- ------------- excel file has created -------- -------------------- ");
 
 //inserir script insert-form.js a abaixo
 
@@ -113,7 +113,7 @@ var newInfos = workSheetsFromFile[0];
 
 
 
-console.log("-----  excel file has read ----- "); 
+console.log("--------------------------  excel file has read --------------------------------- "); 
 
 console.log(newInfos); 
 
@@ -133,21 +133,28 @@ WebScrapingLocalTestII();
     const inserts =  driver.findElements(
     By.xpath('//*[@id="page-wrapper"]/div[3]/div[1]/div/div/div[2]/div[2]/div[3]/div[2]')
       );
+
+
+
+
+      inserts.innerHTML = "";
+
+
       if (inserts != "") {
-        console.log("------------- form has captured ---------- "); 
+        console.log("------------------------ form has captured -------------------------- "); 
         //changeInfos();  
       } else {
         WebScrapingLocalTestII(); 
       }
 
 
-
       //change infos
 
       
     
-      
-      
+      //bug
+      driver.quit(5); 
+
       
    }
   //  function changeInfos(){
@@ -167,7 +174,7 @@ WebScrapingLocalTestII();
 //console.log("finish"); 
 
 
-console.log("--- app has finished --- ");
+console.log("----------------------------- app has finished ---------------------------- ");
 
 // fim do programa 
 
