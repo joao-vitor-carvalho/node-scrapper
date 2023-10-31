@@ -20,7 +20,7 @@ app.get('/', async (request, response) => {
  }
 });
 app.listen(port, () => {
- console.log(`Example app listening at http://localhost:${port}`);
+ console.log(`Server connected at http://localhost:${port}`);
 });
 
 //get allVideos(function for general infos) to first page 
@@ -62,10 +62,13 @@ async function getVideos(videos) {
       console.log(error);
     }
     return videoDetails;
-    console.log(videoDetails);
+    
     //scrap finalizado e JSON gerado em videoDetails
    }
-    
+   
+//console.log(videoDetails);
+
+
 
 var fs = require('fs');
 var writeStream = fs.createWriteStream("infos.xls");
@@ -82,5 +85,93 @@ writeStream.close();
 
 //excel create with json informations
 
+console.log("---------- --------- scrap execeuted in http://webapplayers.com/inspinia_admin-v2.9.4/table_data_tables.html -------- ---------- ");
+console.log("---------- --------- excel file has created -------- ---------- ");
 
 //inserir script insert-form.js a abaixo
+
+
+//algoritmo de execucao 
+
+
+//ler arquivo excel - ok 
+//guardar infos em variáveis - ok 
+//acessar form - ok 
+//inserir em inserts valores de variáveis - 
+//concluir programa - hoje 
+
+
+xlsx = require('node-xlsx').default; 
+
+
+const workSheetsFromFile = xlsx.parse('./infos.xls');
+
+
+//variável com infos do xlsx 
+var newInfos = workSheetsFromFile[0];
+
+
+
+
+console.log("-----  excel file has read ----- "); 
+
+console.log(newInfos); 
+
+
+
+
+//mostrar na tela as infos inseridas no form 
+
+
+WebScrapingLocalTestII(); 
+
+//function acess form and insert infos  
+ function WebScrapingLocalTestII() {
+
+    driver =  new Builder().forBrowser('chrome').build();
+    driver.get('http://webapplayers.com/inspinia_admin-v2.9.4/form_editors.html');
+    const inserts =  driver.findElements(
+    By.xpath('//*[@id="page-wrapper"]/div[3]/div[1]/div/div/div[2]/div[2]/div[3]/div[2]')
+      );
+      if (inserts != "") {
+        console.log("------------- form has captured ---------- "); 
+        //changeInfos();  
+      } else {
+        WebScrapingLocalTestII(); 
+      }
+
+
+
+      //change infos
+
+      
+    
+      
+      
+      
+   }
+  //  function changeInfos(){
+  //   var last = document.getElementsByClassName("note-editable card-block"); 
+  //   var blank = ""; 
+  //   last.innerHTML = blank; 
+  
+  // }
+
+
+//não ta setando o atributo de valor 
+//finalizar hoje 
+
+
+
+
+//console.log("finish"); 
+
+
+console.log("--- app has finished --- ");
+
+// fim do programa 
+
+
+
+
+
