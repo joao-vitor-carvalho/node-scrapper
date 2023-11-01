@@ -9,12 +9,12 @@
 ###### How to Use:
 
   1. git clone this repository
-  2. 'git clone' 
+  2. 'git clone' https://github.com/joao-vitor-carvalho/node-scrapper.git
   3. open in terminal a folder of project 
   4. install dependencies in directory
-  5. 'sudo npm install' 
+  5. 'npm install' 
   4. init server
-  5. 'sudo node index.js'
+  5. 'node index.js'
   6. acess: http://localhost:3000/
      
 
